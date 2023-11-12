@@ -17,7 +17,7 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>20</x>
       <y>0</y>
       <width>211</width>
       <height>26</height>
@@ -60,6 +60,19 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>0</y>
+      <width>181</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>disconnect</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -67,7 +80,7 @@
      <x>0</x>
      <y>0</y>
      <width>431</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTcpSocket>
+#include <QDebug>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,13 +24,18 @@ private slots:
 
     void on_lineEdit_returnPressed();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::MainWindow *ui;
     QTcpSocket *socket;
     QByteArray data;
+    QString currentTask;
+    bool awaitingTask;
 
 public slots:
     void slotReadyRead();
     void sendToServer(QString str);
+    void automaticAnswer();
 };
 #endif // MAINWINDOW_H

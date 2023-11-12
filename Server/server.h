@@ -4,6 +4,9 @@
 #include <QTcpSocket>
 #include <QVector>
 #include <QDebug>
+#include <QList>
+#include <QRandomGenerator>
+#include <QDataStream>
 
 class Server : public QTcpServer{
     Q_OBJECT
@@ -13,9 +16,11 @@ public:
     QTcpSocket *socket;
 
 private:
+    int token;
     QVector <QTcpSocket*> aSockets;
     QByteArray data;
-    void sendToClient(QString str);
+    void sendToClient(QTcpSocket *client, const QString &str);
+    void sendTaskToClient(QTcpSocket *client);
 
 public slots:
     void incomingConnection(qintptr socketDescriptor);
